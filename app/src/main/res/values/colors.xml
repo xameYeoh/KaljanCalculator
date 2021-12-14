@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffc403</color>
+    <color name="primaryVariant">#e6bc31</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="blackOpaque">#99ffc403</color>
+</resources>

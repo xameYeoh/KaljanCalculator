@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card_view">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        style="@style/grid">
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/burley_ratio" />
+
+        <EditText
+            android:id="@+id/burley_percent"
+            style="@style/edit_text_item"/>
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/burley_concentration" />
+
+        <TextView
+            android:id="@+id/burley_weight"
+            style="@style/item_grid" />
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/virginia_concentration" />
+
+        <TextView
+            android:id="@+id/virginia_weight"
+            style="@style/item_grid" />
+
+    </GridLayout>
+</androidx.cardview.widget.CardView>
+

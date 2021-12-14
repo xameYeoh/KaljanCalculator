@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Kaljan Calculator</string>
+    <string name="total">Total:</string>
+    <string name="leaves">Leaves:</string>
+    <string name="syrope">Syrope:</string>
+    <string name="glycerine">Glycerine:</string>
+    <string name="wet_leaves">Wet leaves:</string>
+    <string name="water">Water:</string>
+    <string name="total_weight_with_tare">Total tare:</string>
+    <string name="calculate">Calculate</string>
+    <string name="burley_ratio">Burley %</string>
+    <string name="burley">Burley:</string>
+    <string name="burley_concentration">Burley:</string>
+    <string name="virginia_concentration">Virginia:</string>
+    <string name="save_recipe">Save the recipe</string>
+    <string name="big_tare">Big tare:</string>
+</resources>

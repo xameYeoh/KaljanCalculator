@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card_view">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:layout_margin="10dp">
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/total" />
+
+        <EditText
+            android:id="@+id/total"
+            style="@style/edit_text_item" />
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/burley" />
+
+        <CheckBox
+            android:id="@+id/burley_ratio_checkbox"
+            style="@style/item_grid"
+            android:gravity="center|start"/>
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/leaves" />
+
+        <TextView
+            android:id="@+id/leaves"
+            style="@style/item_grid" />
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/syrope" />
+
+        <TextView
+            android:id="@+id/syrope"
+            style="@style/item_grid" />
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/glycerine" />
+
+        <TextView
+            android:id="@+id/glycerine"
+            style="@style/item_grid" />
+
+        <Button
+            android:id="@+id/calculate_button_dry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal|fill_horizontal"
+            android:text="@string/calculate" />
+    </GridLayout>
+</androidx.cardview.widget.CardView>
+

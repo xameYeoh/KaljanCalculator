@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card_view">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        style="@style/grid">
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/wet_leaves" />
+
+        <EditText
+            android:id="@+id/wet_leaves"
+            style="@style/edit_text_item" />
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/water" />
+
+        <TextView
+            android:id="@+id/water"
+            style="@style/item_grid" />
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/big_tare" />
+
+        <CheckBox
+            android:id="@+id/big_tare_checkbox"
+            style="@style/item_grid"
+            android:gravity="center|start"/>
+
+        <TextView
+            style="@style/item_grid"
+            android:text="@string/total_weight_with_tare" />
+
+        <TextView
+            android:id="@+id/total_weight_with_tare"
+            style="@style/item_grid" />
+
+        <Button
+            android:id="@+id/calculate_button_wet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal|fill_horizontal"
+            android:text="@string/calculate" />
+    </GridLayout>
+</androidx.cardview.widget.CardView>
+
