@@ -1,45 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/root_view"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/hookah_left"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/grid_dry"
-        layout="@layout/card_grid_dry_properties"
-        android:layout_width="210dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/grid_wet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <include
-        android:id="@+id/grid_wet"
-        layout="@layout/card_grid_wet_properties"
-        android:layout_width="210dp"
-        android:layout_height="250dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="116dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <include
-        android:id="@+id/leaves_contents"
-        layout="@layout/card_leaves_contents"
-        android:layout_width="159dp"
-        android:layout_height="158dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="12dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/grid_dry"
-        app:layout_constraintHorizontal_bias="1.0"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fab"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,5 +26,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:contentDescription="@string/save_recipe"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
