@@ -7,7 +7,7 @@
         <item name="android:layout_rowWeight">1</item>
         <item name="android:ems">10</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="background">@color/blackOpaque</item>
     </style>
     <style name="grid">
