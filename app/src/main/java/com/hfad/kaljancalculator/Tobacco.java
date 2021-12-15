@@ -8,7 +8,6 @@ public class Tobacco {
     private double burleyRatio;
     private int glycerine;
     private int syrope;
-    private int water;
     private int total;
 
     Tobacco(){
@@ -63,7 +62,6 @@ public class Tobacco {
             this.tobacco.leaves = (int) Math.round(total * 0.171);
             this.tobacco.syrope = (int) Math.round(total * 0.300);
             this.tobacco.glycerine = (int) Math.round(total * 0.498);
-            this.tobacco.water = (int) Math.round(total * 0.030);
 
             return tobacco;
         }
