@@ -1,8 +1,10 @@
 package com.hfad.kaljancalculator;
 
+import android.content.ContextWrapper;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +13,17 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.hfad.kaljancalculator.Room.TobaccoDao;
+import com.hfad.kaljancalculator.Room.TobaccoDatabase;
+import com.hfad.kaljancalculator.Room.TobaccoEntity;
+
 public class TobaccoSettingsFragment extends Fragment {
+    private final String DB_NAME = "Tobacco_Database";
     private Tobacco tobacco;
     private Tobacco.Details details;
     private double burleyRatio = 0.0;
     private View root;
+    private TobaccoDatabase db;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +54,9 @@ public class TobaccoSettingsFragment extends Fragment {
 
         View burleyCheckBox = root.findViewById(R.id.burley_ratio_checkbox);
         burleyCheckBox.setOnClickListener(this::toggleBurley);
+
+        View saveButton = getActivity().findViewById(R.id.save_button);
+        saveButton.setOnClickListener(this::saveTobaccoToDatabase);
     }
 
     private void createTobaccoAndUpdateViews(View view) {
@@ -136,5 +147,22 @@ public class TobaccoSettingsFragment extends Fragment {
             leavesContentsCard.setVisibility(View.INVISIBLE);
             burleyRatio = 0.0;
         }
+    }
+
+    private void saveTobaccoToDatabase(View view) {
+        if (db == null) {
+            db = Room.databaseBuilder(getActivity().getApplicationContext(), TobaccoDatabase.class, DB_NAME).build();
+        }
+
+        new Thread(()->{
+            TobaccoDao tobaccoDao = db.tobaccoDao();
+
+            TobaccoEntity tobaccoEntity = new TobaccoEntity();
+            tobaccoEntity.total = tobacco.total;
+            tobaccoEntity.burleyRatio = tobacco.burleyRatio;
+            tobaccoEntity.description = "Description 123";
+
+            tobaccoDao.insert(tobaccoEntity);
+        }).start();
     }
 }

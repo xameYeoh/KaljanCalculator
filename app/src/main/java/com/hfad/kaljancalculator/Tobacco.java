@@ -5,10 +5,10 @@ public class Tobacco {
     public static final int BIG_TARE_WEIGHT = 1256;
 
     private int leaves;
-    private double burleyRatio;
+    public double burleyRatio;
     private int glycerine;
     private int syrope;
-    private int total;
+    public int total;
 
     Tobacco(){
         burleyRatio = 0;
